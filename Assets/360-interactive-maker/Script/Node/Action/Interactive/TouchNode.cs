@@ -9,7 +9,7 @@ namespace _360ExMaker
 	public class TouchNode : Node {
 		[Input] public ObjectNode inputNode;
 
-		public Vector3 velocity;
+		public float velocity_strenth;
 		public float hold_time;
 		
 	}
