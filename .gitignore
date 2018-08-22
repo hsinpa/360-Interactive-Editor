@@ -18,6 +18,7 @@ ExportedObj/
 *.vs
 *.vscode
 *.csproj
+*.sln
 
 
 # Unity3D generated meta files
