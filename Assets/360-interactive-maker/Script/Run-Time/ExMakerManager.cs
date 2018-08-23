@@ -3,18 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class ExMakerManager : MonoBehaviour {
+namespace _360ExMaker { 
 
-    #region Require Parameter
-    VideoPlayer videoPlayer;
+    public class ExMakerManager : MonoBehaviour {
 
-    #endregion
+        NodeReader _nodeReader;
+        VideoPlayer _videoPlayer;
+
+        private void Start()
+        {
+            _nodeReader = transform.Find("model/node_reader").GetComponent<NodeReader>();
+            _videoPlayer = transform.Find("view/video_sphere").GetComponent<VideoPlayer>();
+
+            if (_nodeReader != null)
+                Init();
+        }
+
+        private void Init() {
+            _nodeReader.SetUp();
+        }
+        
 
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
-	
+    }
 }

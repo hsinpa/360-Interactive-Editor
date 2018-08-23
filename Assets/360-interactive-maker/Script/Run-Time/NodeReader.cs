@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using XNode;
+using System.Linq;
 
 namespace _360ExMaker
 {
@@ -9,21 +10,33 @@ namespace _360ExMaker
     {
         [SerializeField]
         private ExFlowChart _exFlowChart;
+        private MediaComponent currentMediaComponent;
 
-        private void Start()
+        public void SetUp()
         {
-            foreach (Node node in _exFlowChart.nodes) {
+            if (_exFlowChart.nodes.Count <= 0)
+                return;
 
+
+            Node defaultNode = _exFlowChart.currentDefaultNode;
+            if (defaultNode == null) {
+                defaultNode = _exFlowChart.nodes.Find(x => x.GetType() == typeof(MediaNode));
+                //Stop, if can't find any medianode
+                if (defaultNode == null) return;
             }
 
-            Node firstNode = _exFlowChart.nodes[0];
-            NodePort nodeport = firstNode.GetOutputPort("something");
+            Debug.Log("Default node name " + defaultNode.name);
+
+            currentMediaComponent = new MediaComponent((MediaNode) defaultNode);
         }
 
+        private void Update()
+        {
+            if (currentMediaComponent != null) {
+                
 
-
-
-
+            }
+        }
 
 
     }
