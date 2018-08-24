@@ -29,7 +29,8 @@ namespace _360ExMaker
 
             currentMediaComponent = new MediaComponent((MediaNode) defaultNode);
         }
-
+        
+        
         private void Update()
         {
             if (currentMediaComponent != null) {
@@ -37,6 +38,8 @@ namespace _360ExMaker
 
             }
         }
+
+
 
 
     }

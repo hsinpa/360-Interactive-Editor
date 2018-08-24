@@ -2,7 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TouchObject : BaseInteractObject {
+namespace _360ExMaker
+{
+    public class TouchObject : BaseInteractObject
+    {
+        private ObjectNode objectNode;
 
-	
+        public void SetUp(ObjectNode objectNode)
+        {
+
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+        }
+
+        void OnTriggerExit(Collider other)
+        {
+        }
+    }
 }

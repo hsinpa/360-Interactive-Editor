@@ -11,6 +11,19 @@ namespace _360ExMaker
 
 		public float velocity_strenth;
 		public float hold_time;
-		
-	}
+
+
+        [Output(connectionType = ConnectionType.Override)] public Node node;
+
+        public override object GetValue(NodePort port)
+        {
+            if (port.fieldName == "node")
+            {
+                return this;
+            }
+
+            return null;
+        }
+
+    }
 }

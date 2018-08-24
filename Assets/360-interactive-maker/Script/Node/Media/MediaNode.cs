@@ -7,7 +7,7 @@ namespace _360ExMaker
 {
     public abstract class MediaNode : Node {
         [Input(connectionType = ConnectionType.Override)] public string url;
-        [Input(connectionType = ConnectionType.Override)] public Node inputNode;
+        [Input] public Node inputNode;
 
         [Output(connectionType = ConnectionType.Override)] public MediaNode node;
 
