@@ -69,7 +69,7 @@ MonoBehaviour:
     node: {fileID: 0}
     time: 0
     delay: 0
-  obj_position: {x: 0, y: 0, z: 0}
+  obj_position: {x: -0.8, y: 0, z: 0}
   obj_rotation: {x: 0, y: 0, z: 0}
   prefab: {fileID: 1093166402030928, guid: bad83ff31d320ea49bf2df9a469b86c7, type: 2}
   obj_position_type: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Name: Touch Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -936, y: -344}
+  position: {x: -952, y: -344}
   ports:
     keys:
     - inputNode
@@ -115,7 +115,7 @@ MonoBehaviour:
       _connectionType: 1
       _dynamic: 0
   inputNode: {fileID: 0}
-  velocity_strenth: 0
+  velocity_strenth: 3
   hold_time: 0
   node: {fileID: 0}
 --- !u!114 &114100670978702390
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: (Default) Media Video node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1880, y: -152}
+  position: {x: -1896, y: -104}
   ports:
     keys:
     - time
@@ -173,7 +173,7 @@ MonoBehaviour:
       _direction: 1
       _connectionType: 1
       _dynamic: 0
-  url: 
+  url: http://techslides.com/demos/sample-videos/small.mp4
   inputNode: {fileID: 0}
   node: {fileID: 0}
   originalName: Media Video node
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: Touch Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -920, y: -168}
+  position: {x: -984, y: -120}
   ports:
     keys:
     - inputNode
@@ -268,8 +268,8 @@ MonoBehaviour:
       _connectionType: 1
       _dynamic: 0
   inputNode: {fileID: 0}
-  velocity_strenth: 0
-  hold_time: 0
+  velocity_strenth: 1
+  hold_time: 1.5
   node: {fileID: 0}
 --- !u!114 &114308780083711700
 MonoBehaviour:
@@ -312,7 +312,7 @@ MonoBehaviour:
       _connectionType: 1
       _dynamic: 0
   inputNode: {fileID: 0}
-  velocity_strenth: 0
+  velocity_strenth: 2
   hold_time: 0
   node: {fileID: 0}
 --- !u!114 &114336583978163402
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: Timer Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -1544, y: -24}
+  position: {x: -1624, y: -72}
   ports:
     keys:
     - inputNode
@@ -422,7 +422,7 @@ MonoBehaviour:
     node: {fileID: 0}
     time: 0
     delay: 0
-  obj_position: {x: 0, y: 0, z: 0}
+  obj_position: {x: 0.8, y: 0, z: 0}
   obj_rotation: {x: 0, y: 0, z: 0}
   prefab: {fileID: 1093166402030928, guid: bad83ff31d320ea49bf2df9a469b86c7, type: 2}
   obj_position_type: 0
@@ -485,7 +485,7 @@ MonoBehaviour:
       _direction: 1
       _connectionType: 1
       _dynamic: 0
-  url: 
+  url: https://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_5mb.mp4
   inputNode: {fileID: 0}
   node: {fileID: 0}
   originalName: Media Video node
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_Name: Media Video Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -696, y: 184}
+  position: {x: -696, y: 152}
   ports:
     keys:
     - time
@@ -545,7 +545,7 @@ MonoBehaviour:
       _direction: 1
       _connectionType: 1
       _dynamic: 0
-  url: 
+  url: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
   inputNode: {fileID: 0}
   node: {fileID: 0}
   originalName: Media Video node

@@ -17,15 +17,28 @@ namespace _360ExMaker {
             _objectHolderManager = transform.Find("view/interact_object_holder").GetComponent<ObjectHolderManager>();
             _videoPlayer = GetComponent<ExMakerVideoManager>();
 
+            _objectHolderManager.SetUp(this);
+
             if (_nodeReader != null)
                 Init();
         }
 
         private void Init() {
             _nodeReader.SetUp();
-        }
-        
+            _videoPlayer.SetUp(_objectHolderManager);
 
+            PlayNextMedia(_nodeReader.currentMediaComponent);
+
+        }
+
+        public MediaComponent ParsMediaNode(MediaNode p_node) {
+            return _nodeReader.Parse(p_node);
+        }
+
+        public void PlayNextMedia(MediaComponent p_mediaComponent) {
+            if (p_mediaComponent == null) return;
+            _videoPlayer.PlayMedia(p_mediaComponent);
+        }
 
     }
 }

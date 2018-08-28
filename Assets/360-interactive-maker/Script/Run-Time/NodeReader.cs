@@ -10,7 +10,7 @@ namespace _360ExMaker
     {
         [SerializeField]
         private ExFlowChart _exFlowChart;
-        private MediaComponent currentMediaComponent;
+        public MediaComponent currentMediaComponent;
 
         public void SetUp()
         {
@@ -26,17 +26,11 @@ namespace _360ExMaker
             }
 
             Debug.Log("Default node name " + defaultNode.name);
-
-            currentMediaComponent = new MediaComponent((MediaNode) defaultNode);
+            currentMediaComponent = Parse((MediaNode)defaultNode);
         }
-        
-        
-        private void Update()
-        {
-            if (currentMediaComponent != null) {
-                
 
-            }
+        public MediaComponent Parse(MediaNode p_mediaNode) {
+            return new MediaComponent(p_mediaNode);
         }
 
 

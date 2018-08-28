@@ -23,10 +23,8 @@ namespace _360ExMaker
             NodePort port = p_mediaNode.GetOutputPort("node");
             if (port.ConnectionCount > 0) {
                 _timeNode = (TimerNode)port.Connection.node;
-                Debug.Log("Time node name " + _timeNode.name);
 
                 for (int i = 0; i < _timeNode.timeEvents.Length; i++) {
-                    Debug.Log("eventnode_" + i);
                     NodePort timerport = _timeNode.GetOutputPort("eventnode_" + i);
                     if (timerport.ConnectionCount <= 0) continue;
 
